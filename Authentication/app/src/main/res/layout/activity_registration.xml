@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".Registration">
+
+    <TextView
+        android:id="@+id/textview_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="REGISTRATIONS HERE"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22dp"
+        app:fontFamily="@font/aclonica"
+        />
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:civ_border_color="#FF000000"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_width="2dp" />-->
+
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/firstname_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_registration"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+
+        app:mtf_image="@drawable/ic_contacts_black_24dp"
+        app:mtf_labelColor="#000000">
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#333"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/email_design"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstname_layout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        app:mtf_image="@drawable/ic_mail_black_24dp"
+        app:mtf_labelColor="#000000">
+
+        <EditText
+
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#333"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/password_design"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_design"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        app:mtf_image="@drawable/ic_vpn_key_black_24dp"
+        app:mtf_labelColor="#000000"
+
+        >
+
+        <EditText
+
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#333"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/number"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_design"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        app:mtf_image="@drawable/ic_call_black_24dp"
+        app:mtf_labelColor="#000000"
+
+        >
+
+        <EditText
+
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact No:"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="#333"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <Button
+        android:id="@+id/registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Registrations  " />
+
+    <TextView
+        android:id="@+id/alreadyhave_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Already have account? login"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progressbar"
+        style="@style/SpinKitView.Large.ThreeBounce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
+</RelativeLayout>
